@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(237, 233, 224);
+}
+
+.personal-web-container {
+  width: 130rem;
+  background-color: #fff;
+  padding: 5rem 30rem;
+  margin: 5rem 5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+}
+
+.personal-web-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.personal-web-description {
+  font-size: 1.8rem;
+  text-align: justify;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  background-color: rgb(14, 14, 14);
+  color: #fff;
+  border-radius: 5rem;
+  border: none;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: rgb(14, 14, 14);
+  background-color: #fff;
+  box-shadow: inset 0 0 0 2px rgb(14, 14, 14);
+}
+
+.download-cv {
+  display: block;
+  font-size: 2rem;
+  text-decoration: none;
+  color: rgb(14, 14, 14);
+  font-weight: 500;
+}
+
+.sosmed-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.home-social-link {
+  display: inline-flex;
+  font-size: 3rem;
+  background-color: rgb(14, 14, 14);
+  color: #fff;
+  transition: all 0.4s;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 4rem;
+}
+
+.home-social-link:hover {
+  background-color: #fff;
+  color: rgb(14, 14, 14);
+  box-shadow: inset 0 0 0 2px rgb(14, 14, 14);
+}
+
+.img-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-box {
+  width: 40rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+}
+
+.img-name {
+  font-size: 2rem;
+  color: rgb(14, 14, 14);
+  font-weight: 700;
+  margin-top: 2rem;
+}
+
+.img-job {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.img {
+  width: 100%;
+}

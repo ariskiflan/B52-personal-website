@@ -12,6 +12,69 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
+}
+
+/* NAVBAR */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f3f3;
+  height: 8rem;
+  padding: 2rem;
+  width: 100%;
+}
+
+.nav-btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  background-color: #111727;
+  color: #fff;
+  border-radius: 5rem;
+  border: none;
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.nav-btn:hover {
+  color: #111727;
+  background-color: #f4f3f3;
+  box-shadow: inset 0 0 0 2px #111727;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.main-nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 4rem;
+}
+
+.main-nav-link {
+  font-size: 2rem;
+  color: #000;
+  text-decoration: none;
+}
+
+.active {
+  font-weight: 700;
+}
+
+.logo {
+  width: 6rem;
+}
+
+/* HERO SECTION */
+.main {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,12 +83,19 @@ body {
 }
 
 .personal-web-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 5rem;
   width: 130rem;
   background-color: #fff;
-  padding: 5rem 30rem;
+  padding: 5rem;
   margin: 5rem 5rem;
   border-radius: 1rem;
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+}
+
+.hero-description {
+  padding: 2rem 4rem;
 }
 
 .personal-web-title {
@@ -36,29 +106,31 @@ body {
 .personal-web-description {
   font-size: 1.8rem;
   text-align: justify;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .btn {
+  display: inline-block;
   padding: 1rem 3rem;
   font-size: 1.8rem;
-  background-color: rgb(14, 14, 14);
+  background-color: #111727;
   color: #fff;
   border-radius: 5rem;
   border: none;
   font-weight: 400;
-  margin-bottom: 2rem;
+  margin-right: 4rem;
   cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s;
 }
 
 .btn:hover {
-  color: rgb(14, 14, 14);
+  color: #111727;
   background-color: #fff;
-  box-shadow: inset 0 0 0 2px rgb(14, 14, 14);
+  box-shadow: inset 0 0 0 2px #111727;
 }
 
 .download-cv {
-  display: block;
   font-size: 2rem;
   text-decoration: none;
   color: rgb(14, 14, 14);
@@ -68,17 +140,18 @@ body {
 .sosmed-container {
   display: flex;
   gap: 2rem;
+  margin-top: 5rem;
 }
 
 .home-social-link {
   display: inline-flex;
-  font-size: 3rem;
-  background-color: rgb(14, 14, 14);
+  font-size: 4rem;
+  background-color: #111727;
   color: #fff;
   transition: all 0.4s;
   border-radius: 50%;
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
   justify-content: center;
   align-items: center;
   text-decoration: none;
@@ -87,19 +160,18 @@ body {
 
 .home-social-link:hover {
   background-color: #fff;
-  color: rgb(14, 14, 14);
-  box-shadow: inset 0 0 0 2px rgb(14, 14, 14);
+  color: #111727;
+  box-shadow: inset 0 0 0 2px #111727;
 }
 
 .img-container {
-  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .img-box {
-  width: 40rem;
+  width: 30rem;
   border-radius: 1rem;
   overflow: hidden;
   text-align: center;

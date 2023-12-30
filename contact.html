@@ -26,7 +26,7 @@
     <main class="main">
       <h1 class="contact-heading">GET IN TOUCH</h1>
       <div class="contact-container">
-        <form action="" class="contact-form">
+        <form action="" class="contact-form" onsubmit="submitData(event)">
           <div>
             <label for="name" class="input-label">Name</label>
             <input type="text" id="name" />
@@ -57,7 +57,7 @@
           </div>
 
           <div class="btn-container">
-            <button class="contact-btn" onclick="submitData()">Submit</button>
+            <button type="submit" class="contact-btn">Submit</button>
           </div>
         </form>
       </div>

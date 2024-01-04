@@ -12,17 +12,25 @@ function addProject(e) {
   const angularJs = document.getElementById("angularjs").checked;
   const java = document.getElementById("java").checked;
 
-  // const technologies = document.getElementsByName("Technologies");
-  // let technology = [];
-  // for (let i = 0; i < technologies.length; i++) {
-  //   if (technologies[i].checked) {
-  //     // console.log(technology[i].value);
-  //     technology.push(technologies[i].value);
-  //   }
-  // }
-
   let image = document.getElementById("file-img").files;
   image = URL.createObjectURL(image[0]);
+
+  const dateOne = new Date(startDate);
+  const dateTwo = new Date(endDate);
+  const time = Math.abs(dateTwo - dateOne);
+  const days = Math.floor(time / (1000 * 60 * 60 * 24));
+  const months = Math.floor(time / (1000 * 60 * 60 * 24 * 30));
+  const years = Math.floor(time / (1000 * 60 * 60 * 24) / 365);
+
+  let distance = [];
+
+  if (days < 24) {
+    distance += days + " Days";
+  } else if (months < 12) {
+    distance += months + " Month";
+  } else if (years < 365) {
+    distance += years + " Years";
+  }
 
   const project = {
     projectName,
@@ -33,35 +41,14 @@ function addProject(e) {
     reactJs,
     angularJs,
     java,
+    distance,
     image,
   };
 
   projects.unshift(project);
   renderMyProject();
 
-  console.log(projects);
-
-  const detailProject = document.querySelector(".detail-container");
-  const detailImage = document.querySelectorAll(".list-img");
-  const overlay = document.querySelector(".overlay");
-  const btnDetailClose = document.querySelector(".close-detail");
-
-  const openDetail = function () {
-    detailProject.classList.remove("hidden");
-    overlay.classList.remove("hidden");
-  };
-
-  const closeDetail = function () {
-    detailProject.classList.add("hidden");
-    overlay.classList.add("hidden");
-  };
-
-  for (let i = 0; i < detailImage.length; i++) {
-    detailImage[i].addEventListener("click", openDetail);
-  }
-
-  btnDetailClose.addEventListener("click", closeDetail);
-  overlay.addEventListener("click", closeDetail);
+  document.querySelector("form").reset();
 }
 
 function renderMyProject() {
@@ -84,10 +71,12 @@ function renderMyProject() {
 
     html += `    
         <div class="box">
-          <img src="${projects[i].image}" alt="" class="list-img" />
+          <a href="detail-project.html">
+            <img src="${projects[i].image}" alt="" class="list-img" />
+          </a>
           <h3 class="list-project-title">${projects[i].projectName}</h3>
           <p class="list-project-duration">
-            Duration: ${projects[i].startDate} - ${projects[i].endDate}
+            Duration: ${projects[i].distance}
           </p>
           <p class="list-project-description">${projects[i].description} </p>
 
@@ -107,5 +96,3 @@ function renderMyProject() {
 }
 
 renderMyProject();
-
-// btnCloseModal.addEventListener("click", closeModal);

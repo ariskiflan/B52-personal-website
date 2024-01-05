@@ -45,6 +45,9 @@ function addProject(e) {
     image,
   };
 
+  const localProject = JSON.stringify(project);
+  localStorage.setItem("projects", localProject);
+
   projects.unshift(project);
   renderMyProject();
 

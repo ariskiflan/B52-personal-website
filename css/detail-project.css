@@ -145,3 +145,77 @@ body {
   line-height: 2;
   text-align: justify;
 }
+
+.nav-icon-mobile {
+  font-size: 4rem;
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .detail-project {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 944px) {
+  .detail-project {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  /* NAV */
+  .nav-btn {
+    display: none;
+  }
+
+  .nav-icon-mobile {
+    display: block;
+  }
+
+  .main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 8rem;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 20rem;
+    background-color: rgb(237, 233, 224);
+    transition: all 0.4s;
+
+    /* hide navigation */
+
+    /* 1) hide it visually */
+    opacity: 0;
+
+    /* 2) make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .active-mobile.main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+@media only screen and (max-width: 544px) {
+  .boxes-tech {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-project {
+    gap: 4rem;
+  }
+}

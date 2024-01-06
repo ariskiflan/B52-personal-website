@@ -24,6 +24,8 @@ body {
   height: 8rem;
   padding: 2rem;
   width: 100%;
+  position: fixed;
+  z-index: 999;
 }
 
 .nav-btn {
@@ -92,6 +94,7 @@ body {
   align-items: center;
   flex-direction: column;
   margin-bottom: 3rem;
+  margin-top: 8rem;
 }
 
 .project-form {

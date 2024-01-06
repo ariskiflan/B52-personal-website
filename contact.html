@@ -22,6 +22,11 @@
             <li>
               <a class="main-nav-link" href="my-project.html">My project</a>
             </li>
+            <li>
+              <a class="main-nav-link" href="my-testimonials.html"
+                >My Testimonials</a
+              >
+            </li>
           </ul>
         </nav>
       </div>
@@ -31,44 +36,47 @@
     </header>
 
     <main class="main">
-      <h1 class="contact-heading">GET IN TOUCH</h1>
-      <div class="contact-container">
-        <form action="" class="contact-form" onsubmit="submitData(event)">
-          <div>
-            <label for="name" class="input-label">Name</label>
-            <input type="text" id="name" />
-          </div>
+      <section class="contact-section">
+        <h1 class="contact-heading">GET IN TOUCH</h1>
+        <div class="contact-container">
+          <form action="" class="contact-form" onsubmit="submitData(event)">
+            <div>
+              <label for="name" class="input-label">Name</label>
+              <input type="text" id="name" />
+            </div>
 
-          <div>
-            <label for="email" class="input-label">Email</label>
-            <input type="email" id="email" />
-          </div>
+            <div>
+              <label for="email" class="input-label">Email</label>
+              <input type="email" id="email" />
+            </div>
 
-          <div>
-            <label for="number" class="input-label">Phone Number</label>
-            <input type="text" id="number" />
-          </div>
+            <div>
+              <label for="number" class="input-label">Phone Number</label>
+              <input type="text" id="number" />
+            </div>
 
-          <div>
-            <label for="select" class="input-label">Subject</label>
-            <select name="" id="select">
-              <option value="frontend developer">frontend developer</option>
-              <option value="backend developer">backend developer</option>
-              <option value="fullstack developer">fullstack developer</option>
-            </select>
-          </div>
+            <div>
+              <label for="select" class="input-label">Subject</label>
+              <select name="" id="select">
+                <option value="frontend developer">frontend developer</option>
+                <option value="backend developer">backend developer</option>
+                <option value="fullstack developer">fullstack developer</option>
+              </select>
+            </div>
 
-          <div>
-            <label for="textarea" class="input-label">Your Message</label>
-            <textarea name="" id="textarea" cols="30" rows="10"></textarea>
-          </div>
+            <div>
+              <label for="textarea" class="input-label">Your Message</label>
+              <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+            </div>
 
-          <div class="btn-container">
-            <button type="submit" class="contact-btn">Submit</button>
-          </div>
-        </form>
-      </div>
+            <div class="btn-container">
+              <button type="submit" class="contact-btn">Submit</button>
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
+
     <script src="script/contact.js"></script>
     <script src="script/nav.js"></script>
   </body>

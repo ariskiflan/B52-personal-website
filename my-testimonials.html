@@ -28,11 +28,13 @@
             <li>
               <a class="main-nav-link" href="index.html">Home</a>
             </li>
+
             <li>
               <a class="main-nav-link" href="my-project.html">My project</a>
             </li>
+
             <li>
-              <a class="main-nav-link active href="my-testimonials.html"
+              <a class="main-nav-link" href="my-testimonials.html"
                 >My Testimonials</a
               >
             </li>
@@ -43,16 +45,41 @@
       <i class="ri-menu-line nav-icon-mobile"></i>
       <a href="contact.html" class="nav-btn">contact me</a>
     </header>
+
     <main>
       <section class="my-testimonials">
         <h1 class="testimonials-heading">MY TESTIMONIALS</h1>
+        <div class="rating-box">
+          <button class="rating-btn rating-btn-el">
+            All<i class="ri-star-fill"></i>
+          </button>
+
+          <button class="rating-btn" onclick="filterTestimonials(1)">
+            1<i class="ri-star-fill"></i>
+          </button>
+
+          <button class="rating-btn" onclick="filterTestimonials(2)">
+            2<i class="ri-star-fill"></i>
+          </button>
+
+          <button class="rating-btn" onclick="filterTestimonials(3)">
+            3<i class="ri-star-fill"></i>
+          </button>
+
+          <button class="rating-btn" onclick="filterTestimonials(4)">
+            4<i class="ri-star-fill"></i>
+          </button>
+
+          <button class="rating-btn" onclick="filterTestimonials(5)">
+            5<i class="ri-star-fill"></i>
+          </button>
+        </div>
         <div class="container list-container">
           <div class="testimonials-box"></div>
         </div>
       </section>
-
-      <script src="script/my-testimonials.js"></script>
-      <script src="script/nav.js"></script>
     </main>
+    <script src="script/my-testimonials.js"></script>
+    <script src="script/nav.js"></script>
   </body>
 </html>

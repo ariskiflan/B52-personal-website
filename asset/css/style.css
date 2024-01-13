@@ -72,7 +72,7 @@ body {
 }
 
 .logo {
-  width: 6rem;
+  width: 7rem;
 }
 
 /* HERO SECTION */
@@ -120,7 +120,6 @@ body {
   border-radius: 5rem;
   border: none;
   font-weight: 400;
-  margin-right: 4rem;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.3s;
@@ -137,6 +136,7 @@ body {
   text-decoration: none;
   color: rgb(14, 14, 14);
   font-weight: 500;
+  margin-left: 2rem;
 }
 
 .sosmed-container {
@@ -201,7 +201,7 @@ body {
   display: none;
 }
 
-@media only screen and (max-width: 970px) {
+@media only screen and (max-width: 992px) {
   .sosmed-container {
     align-items: center;
     justify-content: center;
@@ -265,6 +265,7 @@ body {
 
   .download-cv {
     display: block;
+    margin-left: 0;
   }
 
   .hero-description {

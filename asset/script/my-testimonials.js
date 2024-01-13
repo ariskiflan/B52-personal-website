@@ -203,7 +203,7 @@ async function filterTestimonials(rating) {
     return (document.querySelector(
       ".testimonials-box"
     ).innerHTML = `<div class="not-found-box">
-      <img src="img/notfound.jpg" alt="" class="not-found img" />
+      <img src="asset/img/notfound.jpg" alt="" class="not-found img" />
       <h1 class="not-found-title">Data not found!</h1>
       </div>
       `);

@@ -45,16 +45,14 @@ function addProject(e) {
     image,
   };
 
-  const localProject = JSON.stringify(project);
-  localStorage.setItem("projects", localProject);
+  // const localProject = JSON.stringify(project);
+  // window.localStorage.setItem("projects", localProject);
 
   projects.unshift(project);
-  renderMyProject();
+  // renderMyProject();
 
   document.querySelector("form").reset();
-}
 
-function renderMyProject() {
   let html = "";
 
   for (let i = 0; i < projects.length; i++) {
@@ -72,7 +70,7 @@ function renderMyProject() {
       renderIcon += `<i class="fa-brands fa-java"></i>`;
     }
 
-    html += `    
+    html += `
         <div class="box">
           <a href="detail-project.html">
             <img src="${projects[i].image}" alt="" class="list-img" />
@@ -91,11 +89,55 @@ function renderMyProject() {
             <button type="submit" class="list-btn">Edit</button>
             <button type="submit" class="list-btn">Delete</button>
           </div>
-        </div>   
+        </div>
     `;
   }
 
   document.querySelector(".list-box").innerHTML = html;
 }
 
-renderMyProject();
+// function renderMyProject() {
+//   let html = "";
+
+//   for (let i = 0; i < projects.length; i++) {
+//     let renderIcon = "";
+//     if (projects[i].nodeJs) {
+//       renderIcon += `<i class="fa-brands fa-node"></i>`;
+//     }
+//     if (projects[i].reactJs) {
+//       renderIcon += `<i class="ri-reactjs-line"></i>`;
+//     }
+//     if (projects[i].angularJs) {
+//       renderIcon += `<i class="fa-brands fa-angular"></i>`;
+//     }
+//     if (projects[i].java) {
+//       renderIcon += `<i class="fa-brands fa-java"></i>`;
+//     }
+
+//     html += `
+//         <div class="box">
+//           <a href="detail-project.html">
+//             <img src="${projects[i].image}" alt="" class="list-img" />
+//           </a>
+//           <h3 class="list-project-title">${projects[i].projectName}</h3>
+//           <p class="list-project-duration">
+//             Duration: ${projects[i].distance}
+//           </p>
+//           <p class="list-project-description">${projects[i].description} </p>
+
+//           <div class="list-icon">
+//             ${renderIcon}
+//           </div>
+
+//           <div class="button-box">
+//             <button type="submit" class="list-btn">Edit</button>
+//             <button type="submit" class="list-btn">Delete</button>
+//           </div>
+//         </div>
+//     `;
+//   }
+
+//   document.querySelector(".list-box").innerHTML = html;
+// }
+
+// renderMyProject();
